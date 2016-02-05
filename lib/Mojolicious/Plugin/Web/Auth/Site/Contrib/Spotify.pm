@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 package Mojolicious::Plugin::Web::Auth::Site::Contrib::Spotify;
 
 use Mojo::Base qw/Mojolicious::Plugin::Web::Auth::OAuth2/;
