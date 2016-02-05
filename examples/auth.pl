@@ -25,12 +25,11 @@ use Config::Pit;
 print STDERR
     "[NOTICE] should be used in domains other than 'localhost' (e.g. local.example.com)\n";
 
-my $module = 'Contrib::Spotify';
 my $site   = 'spotify';
 helper site => sub { $site };
 
 my $pit = pit_get(
-    lc($module),
+    $site,
     require => {
         key    => ucfirst($site) . ' Client ID',
         secret => ucfirst($site) . ' Client Secret',
@@ -38,7 +37,7 @@ my $pit = pit_get(
 );
 
 plugin 'Mojolicious::Plugin::Web::Auth',
-    module      => $module,
+    module      => ucfirst($site),
     key         => $pit->{key},
     secret      => $pit->{secret},
     on_finished => sub {

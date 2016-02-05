@@ -1,6 +1,6 @@
 NAME
-    Mojolicious::Plugin::Web::Auth::Site::Contrib::Spotify - Spotify OAuth
-    Plugin for Mojolicious::Plugin::Web::Auth
+    Mojolicious::Plugin::Web::Auth::Site::Spotify - Spotify OAuth Plugin for
+    Mojolicious::Plugin::Web::Auth
 
 VERSION
     version 0.000001
@@ -8,7 +8,7 @@ VERSION
 SYNOPSIS
         # Mojolicious
         $self->plugin('Web::Auth',
-            module      => 'Contrib::Spotify',
+            module      => 'Spotify',
             key         => 'Spotify consumer key',
             secret      => 'Spotify consumer secret',
             on_finished => sub {
@@ -19,7 +19,7 @@ SYNOPSIS
 
         # Mojolicious::Lite
         plugin 'Web::Auth',
-            module      => 'Contrib::Spotify',
+            module      => 'Spotify',
             key         => 'Spotify consumer key',
             secret      => 'Spotify consumer secret',
             on_finished => sub {
@@ -30,6 +30,10 @@ SYNOPSIS
 
         # default authentication endpoint: /auth/spotify/authenticate
         # default callback endpoint: /auth/spotify/callback
+
+DESCRIPTION
+    This module adds Spotify <https://developer.spotify.com/web-api/>
+    support to Mojolicious::Plugin::Web::Auth.
 
 AUTHOR
     Olaf Alders <olaf@wundercounter.com>

@@ -1,4 +1,5 @@
 requires "Mojo::Base" => "0";
+requires "Mojolicious::Plugin::Web::Auth" => "0.12";
 requires "perl" => "5.006";
 requires "strict" => "0";
 requires "warnings" => "0";

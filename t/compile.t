@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More;
 
-use Mojolicious::Plugin::Web::Auth::Site::Contrib::Spotify;
+use Mojolicious::Plugin::Web::Auth::Site::Spotify;
 
 ok( 1, 'does not explode' );
 
